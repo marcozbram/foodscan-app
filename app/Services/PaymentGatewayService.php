@@ -7,7 +7,7 @@ use App\Enums\GatewayMode;
 use App\Models\GatewayOption;
 use App\Models\PaymentGateway;
 use Illuminate\Support\Facades\Log;
-use Dipokhalder\EnvEditor\EnvEditor;
+
 use App\Http\Requests\PaginateRequest;
 use Illuminate\Support\Facades\Artisan;
 use App\Libraries\QueryExceptionLibrary;
@@ -15,11 +15,8 @@ use App\Libraries\QueryExceptionLibrary;
 
 class PaymentGatewayService
 {
-    public EnvEditor $envService;
-
-    public function __construct(EnvEditor $envEditor)
+    public function __construct()
     {
-        $this->envService = $envEditor;
     }
 
 

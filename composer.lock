@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee658d88fe08ddf1cd192af7c87750ea",
+    "content-hash": "4d569bd8c129730c5e12a3f493f6a8ef",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -541,6 +541,61 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
             "time": "2024-07-08T12:26:09+00:00"
+        },
+        {
+            "name": "dipokhalder/laravel-env-editor",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dipokhalder/laravel-env-editor.git",
+                "reference": "bd63688c171fb164b4bd0de8f8bee6c61d1ce90a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dipokhalder/laravel-env-editor/zipball/bd63688c171fb164b4bd0de8f8bee6c61d1ce90a",
+                "reference": "bd63688c171fb164b4bd0de8f8bee6c61d1ce90a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "EnvEditor": "Dipokhalder\\EnvEditor\\EnvEditorFacade"
+                    },
+                    "providers": [
+                        "Dipokhalder\\EnvEditor\\EnvEditorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dipokhalder\\EnvEditor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dipok Halder",
+                    "email": "dipokhalder1@gmail.com"
+                }
+            ],
+            "description": "A package for editing the .env file in your Laravel root.",
+            "keywords": [
+                "env",
+                "env-editor",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/dipokhalder/laravel-env-editor/issues",
+                "source": "https://github.com/dipokhalder/laravel-env-editor/tree/v1.0.0"
+            },
+            "time": "2022-05-31T15:43:09+00:00"
         },
         {
             "name": "doctrine/inflector",
