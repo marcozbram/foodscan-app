@@ -4,7 +4,7 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Smartisan\Settings\Facades\Settings;
-use PragmaRX\Countries\Package\Countries;
+
 
 class ValidPhone implements Rule
 {
@@ -14,7 +14,9 @@ class ValidPhone implements Rule
      *
      * @return void
      */
-    public function __construct() {}
+    public function __construct()
+    {
+    }
 
     /**
      * Determine if the validation rule passes.
@@ -25,11 +27,9 @@ class ValidPhone implements Rule
      */
     public function passes($attribute, $value): bool
     {
-        $countryCode = Settings::group('company')->get('company_country_code');
-        $country = Countries::where('cca3', $countryCode)->first();
-
-        if ($country->dialling['national_number_lengths'][0] !== strlen($value)) {
-            $this->message = 'The :attribute number should be ' . $country->dialling['national_number_lengths'][0] . ' digits long.';
+        // Simplified validation for Vercel deployment without PragmaRX
+        if (strlen($value) < 8 || strlen($value) > 15) {
+            $this->message = 'The :attribute number is invalid.';
             return false;
         }
 
